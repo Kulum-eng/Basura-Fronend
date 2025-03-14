@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Sensor Ultrasónico</title>
+    <link rel="stylesheet" href="basura.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Sensor Ultrasónico</h1>
+        
+        <div class="trash-container">
+            <div class="trash-lid"></div>
+            <div class="trash-body">
+                <div class="trash-content"></div>
+            </div>
+            <div class="sensor-container">
+                <div class="sensor-eyes">
+                    <div class="sensor-eye left"></div>
+                    <div class="sensor-eye right"></div>
+                </div>
+                <div class="sensor-board"></div>
+                <div class="sensor-wires">
+                    <div class="wire red"></div>
+                    <div class="wire blue"></div>
+                    <div class="wire yellow"></div>
+                    <div class="wire black"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="display">
+                <div class="reading">
+                    <span id="distance">0</span>
+                    <span class="unit">cm</span>
+                </div>
+            </div>
+            
+            <div class="control-panel">
+                <button id="activate-btn">Activar Sensor</button>
+                <div class="slider-container">
+                    <label for="object-distance">Distancia del Objeto:</label>
+                    <input type="range" id="object-distance" min="0" max="400" value="200" step="1">
+                    <span id="distance-value">200 cm</span>
+                </div>
+                <div class="simulation-controls">
+                    <button id="add-object">Añadir Objeto</button>
+                    <button id="remove-object">Quitar Objeto</button>
+                </div>
+            </div>
+            
+            <div class="simulation-area">
+                <div class="sensor-waves">
+                    <div class="wave wave1"></div>
+                    <div class="wave wave2"></div>
+                    <div class="wave wave3"></div>
+                </div>
+                <div id="object" style="--distance: 200px"></div>
+            </div>
+        </div>
+        
+        <div class="data-log">
+            <h3>Registro de Lecturas</h3>
+            <div id="log-entries"></div>
+        </div>
+    </div>
+    
+    <script src="basura.js"></script>
+</body>
+</html>
